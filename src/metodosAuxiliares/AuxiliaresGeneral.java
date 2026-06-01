@@ -45,6 +45,7 @@ public class AuxiliaresGeneral {
         do{
 
             try{
+
                 String fechaPrestamo = JOptionPane.showInputDialog("(Ingrese la fecha con el siguiente formato DD-MM-YYYY):");
                 fecha = LocalDate.parse(fechaPrestamo, formatoFecha);
                 seguir = false;

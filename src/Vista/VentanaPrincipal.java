@@ -2,7 +2,6 @@ package Vista;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
 public class VentanaPrincipal extends JFrame {
 

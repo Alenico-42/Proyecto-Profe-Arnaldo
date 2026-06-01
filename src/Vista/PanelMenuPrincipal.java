@@ -1,12 +1,20 @@
 package Vista;
 
+import Repositorio.*;
+import Modelo.*;
+import Controlador.*;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class PanelMenuPrincipal extends JPanel {
     VentanaPrincipal ventanaPrincipal;
+    Repositorio<Prestamo> RPrestamos = new RepositorioPrestamo();
+    Repositorio<Alumno> RAlumno = new RepositorioAlumno();
+    Repositorio<Libro> RLibro =  new RepositorioLibro();
+    ControladorPrestamo CPrestamo = new ControladorPrestamo(RPrestamos);
+    ControladorAlumno CAlumno = new ControladorAlumno(RAlumno);
+    ControladorLibro CLibro = new ControladorLibro(RLibro);
 
     public PanelMenuPrincipal(VentanaPrincipal ventanaPrincipal) {
         this.ventanaPrincipal = ventanaPrincipal;
@@ -23,6 +31,12 @@ public class PanelMenuPrincipal extends JPanel {
         JButton gestionarLibro =  new JButton("2-Gestionar Libro");
         JButton gestionarPrestamo =   new JButton("3-Gestionar Prestamo");
         JButton salir =   new JButton("4-Salir");
+
+        gestionarAlumno.addActionListener(e->{
+            PanelGestionarAlumno panelGestionarAlumno= new PanelGestionarAlumno(ventanaPrincipal,CAlumno );
+            ventanaPrincipal.agregarPanel(panelGestionarAlumno,"Gestionar Alumno");
+            ventanaPrincipal.mostrarPanel("Gestionar Alumno");
+        });
 
         gestionarLibro.addActionListener( e-> {
             PanelGestionarLibros  panelGestionarLibros = new PanelGestionarLibros(ventanaPrincipal);

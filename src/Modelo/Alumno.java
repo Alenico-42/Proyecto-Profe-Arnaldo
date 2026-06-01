@@ -1,6 +1,7 @@
 package Modelo;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Alumno {
 
@@ -16,7 +17,8 @@ public class Alumno {
     private String facultad;
 
 
-    public Alumno(String nombreApellido, String numeroCI, String email, String telefono, LocalDate fechaNacimiento,  String facultad) {
+
+    public Alumno(String nombreApellido, String numeroCI, String email, String telefono, LocalDate fechaNacimiento, String facultad) {
         setNombreApellido(nombreApellido);
         setNumeroCI(numeroCI);
         setEmail(email);

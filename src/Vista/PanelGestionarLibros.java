@@ -8,9 +8,6 @@ import Controlador.ControladorLibro;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
-import java.util.InputMismatchException;
-
-import static Vista.MenuPrincipal.isNumValido;
 
 public class PanelGestionarLibros extends JPanel {
     Repositorio<Libro> RLibro = new RepositorioLibro();

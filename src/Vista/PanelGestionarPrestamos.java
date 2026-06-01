@@ -14,15 +14,15 @@ import java.util.HashMap;
 import java.util.List;
 
 public class PanelGestionarPrestamos extends JPanel {
-    Repositorio<Prestamo> RPrestamos = new RepositorioPrestamo();
-    Repositorio<Alumno> RAlumno = new RepositorioAlumno();
-    Repositorio<Libro> RLibro =  new RepositorioLibro();
+    Repositorio<Prestamo> RPrestamos ;
+    Repositorio<Alumno> RAlumno ;
+    Repositorio<Libro> RLibro;
     //Formato de fechas dd/MM/YYYY
     DateTimeFormatter  formatoFecha = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-    ControladorPrestamo CPrestamo = new ControladorPrestamo(RPrestamos);
-    ControladorAlumno CAlumno = new ControladorAlumno(RAlumno);
-    ControladorLibro CLibro = new ControladorLibro(RLibro);
+    ControladorPrestamo CPrestamo;
+    ControladorAlumno CAlumno;
+    ControladorLibro CLibro;
 
     VentanaPrincipal ventanaPrincipal;
 
